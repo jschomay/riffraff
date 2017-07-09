@@ -8,6 +8,8 @@ newtype State = State
   { title :: String
   , route :: Route
   , loaded :: Boolean
+  , code :: String
+  , valid :: Boolean
   }
 
 derive instance newtypeState :: Newtype State _
@@ -17,4 +19,6 @@ init url = State
   { title: config.title
   , route: match url
   , loaded: false
+  , code: "type here"
+  , valid:  false
   }
